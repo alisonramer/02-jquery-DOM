@@ -23,7 +23,7 @@ Article.prototype.toHtml = function() {
   $newArticle.find('href').text(this.authorUrl);
   $newArticle.find('a').text(this.title);
   $newArticle.find('time').text(this.publishedOn);
-  $newArticle.find('article-body').html(this.publishedOn);
+  $newArticle.find('.article-body').html(this.body);
   $newArticle.find('time[pubdate]').attr('title', this.publishedOn);
   $newArticle.find('time').text('about ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago');
 /*DONE: This cloned article is no longer a template, as it now
